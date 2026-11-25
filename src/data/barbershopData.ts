@@ -1,0 +1,221 @@
+import { BusinessInfo, ProductItem, ServiceItem, TestimonialItem } from '../types';
+
+import heroImg from '../assets/images/barbershop_hero_1791077676422.jpg';
+import corteImg from '../assets/images/corte_masculino_1791077696954.jpg';
+import barbaImg from '../assets/images/barba_service_1791077708008.jpg';
+import toolsImg from '../assets/images/barber_tools_1791077721490.jpg';
+import ceraImg from '../assets/images/cera_capilar_product_1791077686231.jpg';
+
+export const BUSINESS_INFO: BusinessInfo = {
+  name: 'Barbearia O Martins',
+  slogan: 'Seu estilo. Nossa tradição.',
+  description: 'Corte, barba e cuidado masculino no Centro de Fortaleza.',
+  phone: '(85) 99235-3320',
+  whatsapp: '5585992998774',
+  whatsappFormatted: '(85) 99299-8774',
+  email: 'barbeariaomartins@gmail.com',
+  instagram: 'https://www.instagram.com/barbearia.omartins/',
+  instagramHandle: '@barbearia.omartins',
+  address: {
+    street: 'Av. Heráclito Graça',
+    number: '710',
+    neighborhood: 'Centro',
+    city: 'Fortaleza',
+    state: 'CE',
+    country: 'Brasil',
+    full: 'Av. Heráclito Graça, 710 — Centro, Fortaleza — CE',
+  },
+  openingHours: {
+    weekdays: '09:00 às 19:00',
+    saturday: '09:00 às 18:00',
+    sunday: 'Fechado',
+  },
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Av.+Her%C3%A1clito+Gra%C3%A7a%2C+710+-+Centro%2C+Fortaleza+-+CE',
+};
+
+export const SERVICES_DATA: ServiceItem[] = [
+  {
+    id: 'corte-cabelo',
+    name: 'Corte de Cabelo',
+    description: 'Cortes masculinos pensados para valorizar o estilo e a personalidade de cada cliente.',
+    price: 50,
+    priceDisplay: 'R$ 50,00',
+    duration: '45 min',
+    image: corteImg,
+    available: true,
+    whatsappMessage: 'Olá! Gostaria de agendar um corte na Barbearia O Martins.',
+  },
+  {
+    id: 'barba',
+    name: 'Barba',
+    description: 'Cuidado e acabamento para deixar a barba alinhada, definida e bem cuidada.',
+    price: 35,
+    priceDisplay: 'R$ 35,00',
+    duration: '35 min',
+    image: barbaImg,
+    available: true,
+    whatsappMessage: 'Olá! Gostaria de agendar uma barba na Barbearia O Martins.',
+  },
+  {
+    id: 'corte-barba',
+    name: 'Corte + Barba',
+    description: 'O combo completo de cuidado masculino: cabelo alinhado e barba impecável no mesmo atendimento com desconto exclusivo.',
+    price: 75,
+    priceDisplay: 'R$ 75,00',
+    duration: '1h 15min',
+    image: toolsImg,
+    available: true,
+    whatsappMessage: 'Olá! Gostaria de agendar corte e barba na Barbearia O Martins.',
+  },
+];
+
+export const PRODUCTS_DATA: ProductItem[] = [
+  {
+    id: 'cera-capilar',
+    name: 'Cera Capilar',
+    category: 'Cabelo',
+    description: 'Fixação duradoura e acabamento fosco/natural para modelar com precisão e manter o penteado no lugar ao longo do dia.',
+    price: 45,
+    priceDisplay: 'R$ 45,00',
+    image: ceraImg,
+    available: true,
+    features: ['Acabamento natural', 'Alta fixação sem brilho excessivo', 'Fácil remoção na lavagem'],
+  },
+  {
+    id: 'pomada-modeladora',
+    name: 'Pomada Modeladora',
+    category: 'Cabelo',
+    description: 'Efeito matte de excelente sustentação para estruturar penteados clássicos e modernos sem ressecar os fios.',
+    price: 45,
+    priceDisplay: 'R$ 45,00',
+    image: ceraImg,
+    available: true,
+    features: ['Efeito matte seco', 'Remodelável durante o dia', 'Aroma masculino suave'],
+  },
+  {
+    id: 'oleo-barba',
+    name: 'Óleo para Barba',
+    category: 'Barba',
+    description: 'Fórmula hidratante que amacia os fios rebeldes, perfuma suavemente e protege a pele sob a barba contra irritações.',
+    price: 38,
+    priceDisplay: 'R$ 38,00',
+    image: toolsImg,
+    available: true,
+    features: ['Hidratação profunda', 'Toque seco não oleoso', 'Alinha os fios da barba'],
+  },
+  {
+    id: 'balm-barba',
+    name: 'Balm para Barba',
+    category: 'Barba',
+    description: 'Reduz o frizz, alinha o desenho da barba e proporciona refrescância e hidratação imediata no pós-barba ou rotina matinal.',
+    price: 38,
+    priceDisplay: 'R$ 38,00',
+    image: barbaImg,
+    available: true,
+    features: ['Ação calmante e refrescante', 'Modela sem endurecer', 'Proteção diária dos fios'],
+  },
+  {
+    id: 'shampoo-masculino',
+    name: 'Shampoo Masculino',
+    category: 'Cabelo',
+    description: 'Limpeza profunda com sensação refrescante que remove resíduos de modeladores sem agredir o couro cabeludo.',
+    price: 40,
+    priceDisplay: 'R$ 40,00',
+    image: toolsImg,
+    available: true,
+    features: ['Sensação refrescante', 'Controle da oleosidade', 'Uso diário'],
+  },
+];
+
+// Avaliações reais fornecidas dos clientes no Google
+export const TESTIMONIALS_DATA: TestimonialItem[] = [
+  {
+    id: 'test-1',
+    name: 'Carlota',
+    rating: 5,
+    comment: 'Fui hoje, sexta-feira, 21/Novembro cortar o cabelo com a dona Fran. Que mãos mágicas! Atendimento, recepção, ambiente: tudo muito agradável. Agradeço o atendimento e desejo muito, muito sucesso.',
+  },
+  {
+    id: 'test-2',
+    name: 'Nivaldo Neto',
+    rating: 5,
+    comment: 'O melhor atendimento, o melhor ambiente, localização incrível, sempre sou muito bem atendido. O corte é incrível! Recomendo!',
+  },
+  {
+    id: 'test-3',
+    name: 'João Carlos',
+    rating: 5,
+    comment: 'Ótimas instalações. Disponibilidade e atenção com clientes são fortes! Recomendo!',
+  },
+];
+
+// Galeria de imagens
+export const GALLERY_ITEMS = [
+  {
+    id: 'gal-1',
+    title: 'Ambiente Sofisticado',
+    category: 'ambiente',
+    image: heroImg,
+    caption: 'Espaço climatizado, confortável e com iluminação planejada.',
+  },
+  {
+    id: 'gal-2',
+    title: 'Precisão no Corte',
+    category: 'cortes',
+    image: corteImg,
+    caption: 'Degradê e acabamento milimétrico para valorizar sua fisionomia.',
+  },
+  {
+    id: 'gal-3',
+    title: 'Barboterapia & Alinhamento',
+    category: 'barba',
+    image: barbaImg,
+    caption: 'Toalha quente e lâmina tradicional com precisão e conforto.',
+  },
+  {
+    id: 'gal-4',
+    title: 'Ferramentas de Precisão',
+    category: 'ambiente',
+    image: toolsImg,
+    caption: 'Instrumentos higienizados e esterilizados a cada atendimento.',
+  },
+  {
+    id: 'gal-5',
+    title: 'Linha de Cuidados Masculinos',
+    category: 'produtos',
+    image: ceraImg,
+    caption: 'Produtos selecionados para o seu cuidado diário.',
+  },
+];
+
+// Grade visual do Instagram @barbearia.omartins
+export const INSTAGRAM_POSTS = [
+  {
+    id: 'insta-1',
+    imageUrl: corteImg,
+    caption: 'O visual que fala por você. Corte alinhado com técnica e personalidade.',
+    likes: 'Curtido por dezenas de clientes',
+    tag: '#BarbeariaOMartins',
+  },
+  {
+    id: 'insta-2',
+    imageUrl: barbaImg,
+    caption: 'Barba definida, contornos nítidos e hidratação. Cuidado clássico para o homem moderno.',
+    likes: 'Destaque no feed',
+    tag: '#BarbaFortaleza',
+  },
+  {
+    id: 'insta-3',
+    imageUrl: heroImg,
+    caption: 'Seu ponto de parada no Centro de Fortaleza. Conforto, tradição e atendimento direto.',
+    likes: 'Ambiente O Martins',
+    tag: '#CentroDeFortaleza',
+  },
+  {
+    id: 'insta-4',
+    imageUrl: ceraImg,
+    caption: 'Leve a finalização da barbearia para o seu dia a dia. Cera capilar disponível na loja.',
+    likes: 'Cuidados Masculinos',
+    tag: '#EstiloOMartins',
+  },
+];
