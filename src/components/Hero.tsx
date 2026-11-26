@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageCircle, ArrowDown, MapPin, Scissors, ShoppingBag, Clock } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/barbershopData';
-import heroBg from '../assets/images/barbershop_hero_1791077676422.jpg';
+const heroBg = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.56__3__7fd1f905.jpeg';
 
 interface HeroProps {
   onOpenScheduleModal: () => void;
