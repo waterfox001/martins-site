@@ -170,56 +170,102 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
 // Galeria de imagens
 export const GALLERY_ITEMS = [
   {
-    id: 'gal-1',
-    title: 'Ambiente Sofisticado',
-    category: 'ambiente',
-    image: client17,
-    caption: 'Espaço climatizado, confortável e com iluminação planejada.',
+    id: 'before-after-01-03',
+    title: 'Antes e Depois',
+    category: ['cortes', 'barba'],
+    layout: 'before-after',
+    images: [
+      { image: client01, label: 'Antes', alt: 'Foto 01 — cliente antes do atendimento' },
+      { image: client03, label: 'Depois', alt: 'Foto 03 — cliente após o atendimento' },
+    ],
   },
   {
-    id: 'gal-2',
-    title: 'Precisão no Corte',
+    id: 'before-after-02-15',
+    title: 'Antes e Depois',
+    category: ['cortes', 'barba'],
+    layout: 'before-after',
+    images: [
+      { image: client02, label: 'Antes', alt: 'Foto 02 — cliente antes do atendimento' },
+      { image: client15, label: 'Depois', alt: 'Foto 15 — cliente após o atendimento' },
+    ],
+  },
+  {
+    id: 'before-after-10-11',
+    title: 'Antes e Depois',
     category: 'cortes',
-    image: client04,
-    caption: 'Degradê e acabamento milimétrico para valorizar sua fisionomia.',
+    layout: 'before-after',
+    images: [
+      { image: client10, label: 'Antes', alt: 'Foto 10 — cliente antes do atendimento' },
+      { image: client11, label: 'Depois', alt: 'Foto 11 — cliente após o atendimento' },
+    ],
   },
   {
-    id: 'gal-3',
-    title: 'Barboterapia & Alinhamento',
+    id: 'finishes-children-1',
+    title: 'Finalizações',
+    category: 'cortes',
+    layout: 'finalizations',
+    images: [
+      { image: client06, alt: 'Atendimento infantil na barbearia' },
+      { image: client09, alt: 'Corte infantil finalizado' },
+    ],
+  },
+  {
+    id: 'finishes-children-2',
+    title: 'Finalizações',
+    category: 'cortes',
+    layout: 'finalizations',
+    images: [
+      { image: client12, alt: 'Corte infantil finalizado' },
+      { image: client13, alt: 'Corte infantil finalizado' },
+    ],
+  },
+  {
+    id: 'finishes-hair-1',
+    title: 'Finalizações',
+    category: 'cortes',
+    layout: 'finalizations',
+    images: [
+      { image: client04, alt: 'Finalização de cabelo' },
+      { image: client05, alt: 'Finalização de cabelo e barba' },
+    ],
+  },
+  {
+    id: 'finishes-hair-2',
+    title: 'Finalizações',
+    category: 'cortes',
+    layout: 'finalizations',
+    images: [
+      { image: client07, alt: 'Finalização de cabelo' },
+      { image: client08, alt: 'Finalização de cabelo e barba' },
+    ],
+  },
+  {
+    id: 'finishes-hair-beard-1',
+    title: 'Finalizações',
+    category: ['cortes', 'barba'],
+    layout: 'finalizations',
+    images: [
+      { image: client16, alt: 'Finalização de cabelo e barba' },
+      { image: client20, alt: 'Finalização de cabelo e barba' },
+    ],
+  },
+  {
+    id: 'finishes-beard-1',
+    title: 'Finalizações',
     category: 'barba',
-    image: client03,
-    caption: 'Toalha quente e lâmina tradicional com precisão e conforto.',
+    layout: 'finalizations',
+    images: [
+      { image: client18, alt: 'Finalização de cabelo e barba' },
+      { image: client19, alt: 'Finalização de barba' },
+    ],
   },
   {
-    id: 'gal-4',
-    title: 'Ferramentas de Precisão',
-    category: 'ambiente',
-    image: client06,
-    caption: 'Instrumentos higienizados e esterilizados a cada atendimento.',
-  },
-  {
-    id: 'gal-5',
+    id: 'gal-products',
     title: 'Linha de Cuidados Masculinos',
     category: 'produtos',
     image: ceraImg,
     caption: 'Produtos selecionados para o seu cuidado diário.',
   },
-  ...[
-    [client01, 'barba'], [client02, 'barba'], [client05, 'barba'],
-    [client07, 'cortes'], [client08, 'barba'], [client09, 'cortes'],
-    [client10, 'cortes'], [client11, 'barba'], [client12, 'cortes'],
-    [client13, 'cortes'], [client14, 'cortes'], [client15, 'barba'],
-    [client16, 'barba'], [client18, 'barba'], [client19, 'barba'],
-    [client20, 'barba'],
-  ].map(([image, category], index) => ({
-    id: `gal-extra-${index + 1}`,
-    title: category === 'barba' ? 'Barboterapia & Alinhamento' : 'Precisão no Corte',
-    category,
-    image,
-    caption: category === 'barba'
-      ? 'Toalha quente e lâmina tradicional com precisão e conforto.'
-      : 'Degradê e acabamento milimétrico para valorizar sua fisionomia.',
-  })),
 ];
 
 // Grade visual do Instagram @barbearia.omartins
