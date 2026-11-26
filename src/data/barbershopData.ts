@@ -1,10 +1,28 @@
 import { BusinessInfo, ProductItem, ServiceItem, TestimonialItem } from '../types';
 
-import heroImg from '../assets/images/barbershop_hero_1791077676422.jpg';
-import corteImg from '../assets/images/corte_masculino_1791077696954.jpg';
 import barbaImg from '../assets/images/barba_service_1791077708008.jpg';
 import toolsImg from '../assets/images/barber_tools_1791077721490.jpg';
 import ceraImg from '../assets/images/cera_capilar_product_1791077686231.jpg';
+const client01 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.53__1__86b3a36b.jpeg';
+const client02 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.53_ba58634f.jpeg';
+const client03 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.54__1__bb0c6c3a.jpeg';
+const client04 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.54__2__68e30c2a.jpeg';
+const client05 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.54__3__2a92708a.jpeg';
+const client06 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.54__4__150c2ddb.jpeg';
+const client07 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.54__5__8dfc3765.jpeg';
+const client08 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.54_307ee578.jpeg';
+const client09 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.55__1__e88626e6.jpeg';
+const client10 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.55__2__31868e9b.jpeg';
+const client11 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.55__3__fd14c78f.jpeg';
+const client12 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.55__4__bc7a7ecd.jpeg';
+const client13 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.55__5__100753e5.jpeg';
+const client14 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.55_7611a2e2.jpeg';
+const client15 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.56__1__96c7c847.jpeg';
+const client16 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.56__2__18e5b1f0.jpeg';
+const client17 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.56__3__7fd1f905.jpeg';
+const client18 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.56__4__91806486.jpeg';
+const client19 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.56__5__b2417751.jpeg';
+const client20 = '/assets/aistudio/WhatsApp_Image_2026-11-25_at_14.06.56_f3dd6ff0.jpeg';
 
 export const BUSINESS_INFO: BusinessInfo = {
   name: 'Barbearia O Martins',
@@ -41,7 +59,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     price: 50,
     priceDisplay: 'R$ 50,00',
     duration: '45 min',
-    image: corteImg,
+    image: client04,
     available: true,
     whatsappMessage: 'Olá! Gostaria de agendar um corte na Barbearia O Martins.',
   },
@@ -52,7 +70,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     price: 35,
     priceDisplay: 'R$ 35,00',
     duration: '35 min',
-    image: barbaImg,
+    image: client03,
     available: true,
     whatsappMessage: 'Olá! Gostaria de agendar uma barba na Barbearia O Martins.',
   },
@@ -63,7 +81,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     price: 75,
     priceDisplay: 'R$ 75,00',
     duration: '1h 15min',
-    image: toolsImg,
+    image: client18,
     available: true,
     whatsappMessage: 'Olá! Gostaria de agendar corte e barba na Barbearia O Martins.',
   },
@@ -155,28 +173,28 @@ export const GALLERY_ITEMS = [
     id: 'gal-1',
     title: 'Ambiente Sofisticado',
     category: 'ambiente',
-    image: heroImg,
+    image: client17,
     caption: 'Espaço climatizado, confortável e com iluminação planejada.',
   },
   {
     id: 'gal-2',
     title: 'Precisão no Corte',
     category: 'cortes',
-    image: corteImg,
+    image: client04,
     caption: 'Degradê e acabamento milimétrico para valorizar sua fisionomia.',
   },
   {
     id: 'gal-3',
     title: 'Barboterapia & Alinhamento',
     category: 'barba',
-    image: barbaImg,
+    image: client03,
     caption: 'Toalha quente e lâmina tradicional com precisão e conforto.',
   },
   {
     id: 'gal-4',
     title: 'Ferramentas de Precisão',
     category: 'ambiente',
-    image: toolsImg,
+    image: client06,
     caption: 'Instrumentos higienizados e esterilizados a cada atendimento.',
   },
   {
@@ -186,27 +204,43 @@ export const GALLERY_ITEMS = [
     image: ceraImg,
     caption: 'Produtos selecionados para o seu cuidado diário.',
   },
+  ...[
+    [client01, 'barba'], [client02, 'barba'], [client05, 'barba'],
+    [client07, 'cortes'], [client08, 'barba'], [client09, 'cortes'],
+    [client10, 'cortes'], [client11, 'barba'], [client12, 'cortes'],
+    [client13, 'cortes'], [client14, 'cortes'], [client15, 'barba'],
+    [client16, 'barba'], [client18, 'barba'], [client19, 'barba'],
+    [client20, 'barba'],
+  ].map(([image, category], index) => ({
+    id: `gal-extra-${index + 1}`,
+    title: category === 'barba' ? 'Barboterapia & Alinhamento' : 'Precisão no Corte',
+    category,
+    image,
+    caption: category === 'barba'
+      ? 'Toalha quente e lâmina tradicional com precisão e conforto.'
+      : 'Degradê e acabamento milimétrico para valorizar sua fisionomia.',
+  })),
 ];
 
 // Grade visual do Instagram @barbearia.omartins
 export const INSTAGRAM_POSTS = [
   {
     id: 'insta-1',
-    imageUrl: corteImg,
+    imageUrl: client07,
     caption: 'O visual que fala por você. Corte alinhado com técnica e personalidade.',
     likes: 'Curtido por dezenas de clientes',
     tag: '#BarbeariaOMartins',
   },
   {
     id: 'insta-2',
-    imageUrl: barbaImg,
+    imageUrl: client19,
     caption: 'Barba definida, contornos nítidos e hidratação. Cuidado clássico para o homem moderno.',
     likes: 'Destaque no feed',
     tag: '#BarbaFortaleza',
   },
   {
     id: 'insta-3',
-    imageUrl: heroImg,
+    imageUrl: client17,
     caption: 'Seu ponto de parada no Centro de Fortaleza. Conforto, tradição e atendimento direto.',
     likes: 'Ambiente O Martins',
     tag: '#CentroDeFortaleza',
